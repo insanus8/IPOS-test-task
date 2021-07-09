@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&displaceholdery=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">    
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
+      <link rel="stylesheet" href="css/style.css">
+      <title>Тестовое задание</title>
+</head>
+<body>
+      <div class="square__wrapp">
+            <ul class="square__list">
+                  <li class="square"></li>
+                  <li class="square"></li>
+                  <li class="square"></li>
+                  <li class="square"></li>
+            </ul>
+      </div>
+      <button class="circle circle--inverted">
+            <span class="circle__text">Нажать</span>
+      </button>
+      <div class="form">
+            <form action="#" class="form__wrapp">
+                  <label class="form__label">
+                        <span>Марка автомобиля</span>
+                        <span class="form__select--wrapp">
+                              <select class="form__select marks">
+                                    <option class="placeholder" selected disabled hidden>Выберите марку</option>
+                              </select>
+                        </span>
+                  </label>
+                  <label class="form__label">
+                        <span>Модель автомобиля</span>
+                        <span class="form__select--wrapp">
+                              <select class="form__select models">
+                                    <option class="placeholder" selected disabled hidden>Выберите модель</option>
+                              </select>
+                        </span>
+                  </label>            
+                  <label class="form__label">
+                        <span>Год</span>
+                        <span class="form__select--wrapp">
+                              <select class="form__select years">
+                                    <option class="placeholder" selected disabled hidden>Выберите год</option>
+                              </select>
+                        </span>
+                  </label>
+                  <button class="btn btn--submit" type="submit">Доставить</button>
+            </form>
+      </div>
+      <div class="calendar">
+            <input type="hidden" class="calendar_value">
+      </div>
+      <p class="information-delivery"></p>
+      
+
+      <script src="js/sctipt.js"></script>
+</body>
+</html>

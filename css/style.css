@@ -1,0 +1,232 @@
+*, ::before, ::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+}
+
+body {
+      background-color: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+}
+
+ul {
+      list-style-type: none;
+}
+
+.btn {
+      padding: 15px 30px;
+      border: none;
+      background-color: transparent;
+      border: 2px solid #ff4048;
+      font-family: inherit;
+      font-weight: 500;
+      font-size: .8em;
+      color: #ff4048;
+      border-radius: 10px;
+      cursor: pointer;
+      transition:  background-color .6s 0s, color .6s 0s;
+}
+
+.btn:hover {
+      background-color: #ff4048;
+      color: #fff;
+}
+
+.square__wrapp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      overflow: hidden;
+      z-index: 5;
+}
+
+.square__list {
+      width: 250px;
+      height: 250px;
+      display: flex;
+      flex-wrap: wrap;
+      position: static;
+}
+
+.square {
+      width: 125px;
+      height: 125px;
+      background-color: #ff4048;
+      position: absolute;
+}
+
+.square:nth-child(2) {
+      margin-left: 125px;
+}
+.square:nth-child(3) {
+      margin-top: 125px;
+}
+.square:nth-child(4) {
+      margin-top: 125px;
+      margin-left: 125px;
+}
+
+.circle {
+      width: 250px;
+      height: 250px;
+      background-color: #ff4048;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(0deg);
+      transition: transform 2s 0s, box-shadow .6s 0s;
+      opacity: 0;
+      cursor: pointer;
+      box-shadow: none;
+}
+
+.circle:disabled,
+.circle:hover:disabled,
+.circle:active:disabled {
+      cursor: default;
+      box-shadow: none;
+}
+
+.circle:hover {
+      box-shadow: 0 0 0 2em rgb(255 64 72 / 25%);
+}
+
+.circle:active {
+      box-shadow: 0 0 0 1em rgb(255 64 72 / 25%);
+}
+
+.circle--inverted {
+      transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+.circle__text {
+      pointer-events: none;
+      font-size: 2.5em;
+      transform: scaleY(1);
+      display: block;
+}
+
+.form {
+      background-color: #fff;
+      padding: 40px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 6;
+      transform: translate(-50%, -50%);
+      max-width: 350px;
+      width: 100%;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .6);
+      opacity: 0;
+      visibility: hidden;
+}
+
+.form__wrapp {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+}
+
+.form__label {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+}
+
+.form__label:not(:last-child) {
+      margin-bottom: 30px;
+}
+
+.form__select {
+      width: 100%;
+      margin-top: 5px;
+      padding: 10px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      appearance: none!important;
+      outline: none;
+      transition: box-shadow .6s 0s, border-color .6s 0s;
+}
+
+.form__select:hover, .form__select:focus {
+      border-color: rgb(255 64 72 / 25%);
+      box-shadow: 0 0 0 4px rgb(255 64 72 / 25%);
+}
+
+.form__select--wrapp {
+      position: relative;
+      width: 100%;
+}
+
+.form__select--wrapp::before {
+      content: "";
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-caret-down' viewBox='0 0 16 16'%3e%3cpath d='M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z'%3e%3c/path%3e%3c/svg%3e");
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-40%);
+      width: 15px;
+      height: 17px;
+      pointer-events: none;
+}
+
+.calendar {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+      opacity: 0;
+      z-index: 7;
+}
+
+.calendar .ui-widget.ui-widget-content {
+      max-width: 320px;
+}
+
+.information-delivery {
+      max-width: 520px;
+      width: 100%;
+      padding: 20px;
+      font-size: 1.6em;
+      line-height: 140%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 3;
+}
+
+.anew {
+      font-size: inherit;
+      line-height: inherit;
+      color: #ff4048;
+      background-color: transparent;
+      background-image: linear-gradient(#ff4048 50%, #ff4048 50%);
+      background-size: 0 2px;
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      cursor: pointer;
+      border: none;
+      transition: background-size .5s 0s, opacity .3s 0s;
+}
+
+.anew:hover {
+      background-size: 100% 2px;
+}
+
+.anew:active {
+      opacity: .6;
+}
