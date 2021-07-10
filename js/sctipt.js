@@ -98,7 +98,7 @@ select.each(function() {
 })
 
 function startingData() {
-      $.getJSON( "IPOS-test-task/json.json", function(data){
+      $.getJSON( "https://insanus8.github.io/IPOS-test-task/", function(data){
             cars = data 
             displayOptions()
             createOption(marksSelector, marks)
